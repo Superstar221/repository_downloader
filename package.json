@@ -1,5 +1,5 @@
 {
-  "name": "afrik-invest",
+  "name": "repositorydownloader",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng serve",
