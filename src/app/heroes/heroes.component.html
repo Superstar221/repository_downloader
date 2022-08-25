@@ -1,0 +1,25 @@
+<h2>Please input the github username you want to access</h2>
+
+
+<div>
+  <div style="display: flex;" [class.mydiv]="repos?.length">
+    <label for="username">username: </label>
+    <input id="username" #userName />
+    <label *ngIf="repos?.length" for="totalcount">totalcount: </label>
+    <span *ngIf="repos?.length">{{this.repos?.length!}}</span>
+  </div> 
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="download(userName.value);">
+      Download
+    </button>
+</div>
+
+  <ul class="heroes">
+    <li *ngFor="let repo of repos; index as i" style="display: flex; margin-top: 10px;">
+        <span class="badge">{{i+1}}</span>
+        <span>{{repo}}</span>  
+    </li>
+  </ul> 
+
+ 
+
